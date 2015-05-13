@@ -1,0 +1,40 @@
+{
+  "name": "parsec",
+  "version": "0.0.7",
+  "description": "ES6 generator-based CLI options parser.",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "babel --optional runtime src/ -d ./; npm test",
+    "test": "npm run tape | tspec",
+    "tape": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bucaran/parsec.git"
+  },
+  "keywords": [
+    "options",
+    "argv",
+    "arguments"
+  ],
+  "author": "Jorge Bucaran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bucaran/parsec/issues"
+  },
+  "homepage": "https://github.com/bucaran/parsec#readme",
+  "dependencies": {
+    "babel": "^5.3.3",
+    "babel-runtime": "^5.3.3",
+    "parsebool": "^0.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^3.1.1",
+    "eslint": "^0.21.0",
+    "tap-spec": "^3.0.0",
+    "tape": "^4.0.0"
+  }
+}
