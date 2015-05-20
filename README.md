@@ -253,7 +253,7 @@ Why another options CLI parser?. There are several options out there. There is [
 
 There is also [`minimist`](https://github.com/substack/minimist) and [`nopt`](https://github.com/npm/nopt), which are leaner and offer a more limited feature set, but I wasn't comfortable with their traditional design and large code base. I also found both slightly _too verbose_ for my taste.
 
-I decided to write my own solution (though it [wasn't the first time](github.com/bucaran/getopts)) using ES6.
+I decided to write my own solution (though it [wasn't the first time](https://github.com/bucaran/getopts)) using ES6.
 
 The end result is ~150 LOC and a readable code base.
 
