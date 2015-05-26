@@ -1,6 +1,6 @@
 {
   "name": "parsec",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "ES6 generator-based CLI options parser.",
   "main": "lib/index.js",
   "directories": {
