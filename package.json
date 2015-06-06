@@ -28,8 +28,7 @@
   "homepage": "https://github.com/bucaran/parsec#readme",
   "dependencies": {
     "babel": "^5.3.3",
-    "babel-runtime": "^5.3.3",
-    "parsebool": "^0.1.0"
+    "babel-runtime": "^5.3.3"
   },
   "devDependencies": {
     "babel-eslint": "^3.1.1",

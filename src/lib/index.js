@@ -1,4 +1,3 @@
-import parseBool from "parsebool"
 export default class Parsec {
   constructor({ operandsKey = "_", noFlags = true, sliceIndex = 2 }) {
     this._endOfOpts = false
@@ -48,14 +47,21 @@ export default class Parsec {
     @return {{ key, value }}
   */
   *entries(args) {
+    let isBool = (obj) =>
+      typeof obj === "boolean" || obj === "true" || obj === "false"
+
     for (let { curr, next, value } of this.tokens(args)) {
       if (curr.isBare) {
         if (this.isEndOfOpts(curr.token)) continue
         yield { key: this.operandsKey, value: curr.token }
       } else {
-        if (this.noFlags && parseBool.isBool(value) && curr.isNoFlag) {
+        if (this.noFlags && isBool(value) && curr.isNoFlag) {
           curr.token = curr.noKey
-          value = parseBool.not(value)
+          value = (value === "false")
+            ? true
+            : (value === "true")
+              ? false
+              : !value
         }
         yield { key: curr.token, value }
       }
